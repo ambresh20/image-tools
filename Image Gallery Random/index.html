@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="image-gallery.css">
+</head>
+  
+<body>
+
+	<nav>
+		<ul>
+			<li style="float:left"><img src="/asset/image tool logo.jpg" class="logo" alt="logo"></li>
+			<li style="float:left"><a href="#" class="title">Ai Image Tool</a></li>
+			<li><a class="active" href="#about">About</a></li>
+			<li><a href="/Image Gallery Random/index.html">Random</a></li>
+			<li><a href="/Image Editor JavaScript/index.html">Editor</a></li>
+			<li><a href="/Image Search/index.html">Search</a></li>
+			<li><a href="/Image generator Using Stable Diffuse/index.html">Generate</a></li>
+			<li><a href="#home">Home</a></li>
+			<!--1.Remove background
+			    2. Formate change e.g. png to jpg 
+			-->
+		</ul>
+	</nav>
+
+
+
+
+
+    <div class="container">
+        <div class="header">
+            <h1>Random Image Gallery </h1>
+        </div>
+
+        <div class="input">
+            <label for="">Enter the name of the Images </label>
+            <input type="number" id="input" placeholder="0" min="1" max="80" required>
+        </div>
+        <div class="button">
+            <button id="submit">Get Images </button>
+        </div>
+
+    </div>
+  
+    <div class="img-container">
+    </div>
+
+
+
+	<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa-solid fa-circle-up"></i></button>
+
+
+	<div class="footer">
+		&copy; 2023 India, All Rights Reserved by &nbsp;<i class="fa-brands fa-github fa-beat" style="color: #32e10e;"></i> &nbsp; <a href="https://github.com/ambresh20" class="namelink">Ambresh</a>  
+	</div>
+
+	  
+
+    <script src="image-gallery.js"></script>
+	<script src="https://kit.fontawesome.com/13404514da.js" crossorigin="anonymous"></script>
+	<script>
+		// Get the button
+		let mybutton = document.getElementById("myBtn");
+		
+		// When the user scrolls down 20px from the top of the document, show the button
+		window.onscroll = function() {scrollFunction()};
+		
+		function scrollFunction() {
+		  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = "block";
+		  } else {
+			mybutton.style.display = "none";
+		  }
+		}
+		
+		// When the user clicks on the button, scroll to the top of the document
+		function topFunction() {
+		  document.body.scrollTop = 0;
+		  document.documentElement.scrollTop = 0;
+		}
+	</script>
+
+</body>
+</html>
